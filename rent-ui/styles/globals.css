@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Numans";
+  src: url("./Numans-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Clash Display";
+  src: url("./ClashDisplay-Variable.ttf") format("truetype");
+  font-display: swap;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.background {
+  height: 100vh;
+  width: 100%;
+  background-position: center center;
+  overflow-y: scroll;
+}
+
+.color-bg {
+  height: 100vh;
+  width: 100%;
+  background-image: url("/images/final-bg.png");
+  background-position: center center;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.93);
+  overflow-y: scroll;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+*::-webkit-scrollbar {
+  height: 4px;
+  width: 3px;
+  background-color: rgb(20, 20, 20);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #00bb44;
+  border-radius: 10px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  display: none;
+}
+
+.gradient-border-outer {
+  height: fit-content;
+  width: fit-content;
+  padding: 2px;
+  background: linear-gradient(
+    155.14deg,
+    rgba(255, 255, 255, 0.15) -2.13%,
+    rgba(255, 255, 255, 0.15) 136.58%
+  );
+  box-shadow: 0px 4px 49px rgba(0, 7, 72, 0.12);
+  border-radius: 16px;
+}
+
+.gradient-border-inner {
+  height: fit-content;
+  width: fit-content;
+  border-radius: 16px;
+  background-color: rgba(0, 0, 0, 0.93);
+}
+
+.loader-wrapper {
+  min-height: inherit;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+  font-family: 500;
+  font-size: 1.5rem;
+  color: #fff;
+}
+.loader-wrapper p {
+  margin-top: 2rem;
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #00bb34;
+  border-color: #00bb34 transparent #00bb34 transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 1280px) {
+}
